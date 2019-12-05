@@ -13,8 +13,29 @@
 #bgImg {
     position: fixed;
     z-index: -10;
-    top:15%;
-    left:0%;
-    width: 100%;
-    height: 100%;
+    top:10%;
+    left:5%;
+    width: 90%;
+    height: 90%;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    
+    text-align: center;
+    
+    position: fixed;
+    left: 27%;
+    top: 35%;
+}
+
+.flag {
+    width: 30px;
+}
+
+#title {
+    text-align: center;
+    color: brown;
+    padding: 1%;
 }
