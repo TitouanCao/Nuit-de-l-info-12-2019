@@ -1,0 +1,11 @@
+#simulationButton {
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    width: 10%;
+}
+
+#simulationButton:hover {
+    left: 43%;
+    width: 14%;
+}
