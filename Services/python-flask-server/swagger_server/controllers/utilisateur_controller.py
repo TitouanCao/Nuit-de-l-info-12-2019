@@ -99,6 +99,8 @@ def put_user(Changer2=None):  # noqa: E501
     try:
         cursor.execute("""SELECT * FROM UserAccount WHERE pseudo = %s AND password = %s""", (Changer2.pseudo, Changer2.password))
         rows = cursor.fetchall()
+        if(rows == []):
+            return "{ \"Message\" : \"Utilisateur non trouvé.\" }"
         if(Changer2.codepostal is not None):
             cursor.execute("""UPDATE UserAccount SET codepostal = %s WHERE pseudo = %s AND password = %s""", (Changer2.codepostal,Changer2.pseudo,Changer2.password))
         if(Changer2.new_password is not None):
