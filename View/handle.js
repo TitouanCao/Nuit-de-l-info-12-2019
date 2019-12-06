@@ -110,7 +110,6 @@ function createQuest () {
     container.style.transition = "1s"
     container.style.textAlign = "center"
     cardsContainer.style.marginTop = "7%"
-    cardsContainer.style.marginLeft = "28%      "
 }
 
 function createQuest1 () {
