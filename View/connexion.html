@@ -23,18 +23,18 @@
 		 </nav>
 		 <div class="container">
 			 <header>
-				 <h1 id="Titre_connexion">Créer un compte</h1>
+				 <h1 id="Titre_connexion">Creer un compte</h1>
 			 </header>
 			 <div class="row">
 			     <form class="col s12">
 			       <div class="row">
 			         <div class="input-field col s6">
 			           <input id="first_name" type="text" class="validate">
-			           <label for="first_name">Prénom</label>
+			           <label for="first_name">Pseudo</label>
 			         </div>
 			         <div class="input-field col s6">
 			           <input id="last_name" type="text" class="validate">
-			           <label for="last_name">Nom</label>
+			           <label for="last_name">Code Postal</label>
 			         </div>
 			       </div>
 			       <div class="row">
@@ -43,14 +43,16 @@
 			           <label for="password">Mot de passe</label>
 			         </div>
 			       </div>
-			       <div class="row">
-			         <div class="input-field col s12">
-			           <input id="email" type="email" class="validate">
-			           <label for="email">Email</label>
-			         </div>
-			       </div>
 			     </form>
 			   </div>
+         <div class="row">
+           <select class="browser-default">
+             <option value="" disabled selected>Expertise(optionnel)</option>
+             <option value="1">Besoin d'aide</option>
+             <option value="2">Intermediaire</option>
+             <option value="3">Pret a aider</option>
+           </select>
+       </div>
 				 <a id="Bouton_confirmer" class="waves-effect waves-light btn green">Confirmer</a>
 				 <a id="Bouton_simulation" class="waves-effect waves-light btn green">Continuer vers la simulation</a>
 
