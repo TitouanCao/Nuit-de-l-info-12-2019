@@ -57,8 +57,38 @@
 }
 
 #Bouton_confirmer {
-  text-align: : center;
+  text-align: center;
 }
+
+#password {
+  border-bottom: 1px solid #4caf50;
+  box-shadow: 0 1px 0 0 #4caf50;
+}
+
+#password2 {
+  border-bottom: 1px solid #4caf50;
+  box-shadow: 0 1px 0 0 #4caf50;
+}
+
+#first_name {
+  border-bottom: 1px solid #4caf50;
+  box-shadow: 0 1px 0 0 #4caf50;
+}
+
+#first_name2 {
+  border-bottom: 1px solid #4caf50;
+  box-shadow: 0 1px 0 0 #4caf50;
+}
+
+#last_name {
+  border-bottom: 1px solid #4caf50;
+  box-shadow: 0 1px 0 0 #4caf50;
+}
+
+#Bouton_confirmer2 {
+  text-align: center;
+}
+
 
 #Bouton_simulation {
   text-align: center;
