@@ -2,28 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>JS Bin</title>
+    <meta name="viewport" content="width=device-width" initial-scale=1.0>
 
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel ="stylesheet" type="text/css" href="style.css">
   </head>
-  <body class="grey lighten-2">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header"><span class="new badge red">4</span><i class="material-icons">filter_drama</i>First</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><span class="badge">1</span><i class="material-icons">place</i>Second</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><span class="badge">1</span><i class="material-icons">place</i>Second</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-      </li>
-    </ul>
+  <body>
+    <nav>
+        <div class="nav-wrapper amber brown">
+             <a href="index.html" class="brand-logo"><div class="call"><span style="margin-left: 15px">Accueil</span></div></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#" onclick="switchToFr()"><img src="../Resources/fr.jpg" class="flag"></a></li>
+                <li><a href="#" onclick="switchToEn()"><img src="../Resources/en.jpg" class="flag"></a></li>
+                <li><a href="#" class="btn-floating green pulse"><i class="material-icons">person</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+    <div class="container">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><span class="badge"></span>Logement</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><span class="badge"></span>Budget</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><span class="badge"></span>Santé</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><span class="badge"></span>Juridique</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><span class="badge"></span>Intégration</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><span class="badge"></span>Emploi</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
