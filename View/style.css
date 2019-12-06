@@ -22,9 +22,9 @@
 #cards {
     display: flex;
     flex-direction: row;
-    
+
     text-align: center;
-    
+
     position: fixed;
     left: 19%;
     top: 35%;
@@ -93,3 +93,5 @@
 #Bouton_simulation {
   text-align: center;
 }
+
+
