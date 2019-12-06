@@ -40,7 +40,7 @@ class Changer(Model):
         self.attribute_map = {
             'pseudo': 'pseudo',
             'password': 'password',
-            'new_password': 'new password',
+            'new_password': 'new_password',
             'expert_level': 'expert_level',
             'codepostal': 'codepostal'
         }
