@@ -45,10 +45,12 @@
 }
 
 #home:hover {
-    color: green;
-    text-shadow: 1px 1px white;
+    color: lightgreen;
 }
 
+#menu {
+    z-index: 10;
+}
 
 #Titre_connexion {
   text-align: center;
