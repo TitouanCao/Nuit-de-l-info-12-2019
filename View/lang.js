@@ -7,13 +7,13 @@ function getElements () {
 
 function switchToFr () {
     getElements()
-    title.innerHTML = "Ceci est un texte"
+    title.innerHTML = "Guide du jeune"
     home.innerHTML = "Accueil"
 }
 
 function switchToEn () {
     getElements()
-    title.innerHTML = "This is a text"
+    title.innerHTML = "Youngs guide"
     home.innerHTML = "Home"
 }
 
