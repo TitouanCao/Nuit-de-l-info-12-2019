@@ -1,0 +1,176 @@
+---
+swagger: "2.0"
+info:
+  description: "API compte utilisateur pour le site de la nuit de l'info (équipe polyglote)"
+  version: "1.0.0"
+  title: "API nuit info"
+  termsOfService: ""
+  contact:
+    email: "a@b.c"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "nuitinfostore.swagger.io"
+basePath: "/compte"
+tags:
+- name: "Utilisateur"
+  description: "Everything about social help"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+  /Utilisateur/register:
+    post:
+      tags:
+      - "Utilisateur"
+      summary: "Add a new user to the site"
+      operationId: "add_user"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "New User that need to be added to the data base"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "200":
+          description: "OK"
+        "405":
+          description: "Invalid input"
+      x-swagger-router-controller: "swagger_server.controllers.utilisateur_controller"
+  /Utilisateur/login:
+    post:
+      tags:
+      - "Utilisateur"
+      summary: "Check for valid user pseudo and password"
+      operationId: "login"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "log in a user"
+        required: true
+        schema:
+          $ref: "#/definitions/Login"
+      responses:
+        "200":
+          description: "OK"
+        "300":
+          description: "Pseudo and Password don't match"
+        "405":
+          description: "Invalid input"
+      x-swagger-router-controller: "swagger_server.controllers.utilisateur_controller"
+  /Utilisateur/info:
+    get:
+      tags:
+      - "Utilisateur"
+      summary: "Getting informations from a user"
+      operationId: "get_user"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "pseudo"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "password"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "expert_level"
+        in: "path"
+        required: true
+        type: "integer"
+      - name: "codepostal"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "Perfectly Done"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "swagger_server.controllers.utilisateur_controller"
+    post:
+      tags:
+      - "Utilisateur"
+      summary: "Changing user information"
+      operationId: "put_user"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "Changer"
+        required: false
+        schema:
+          $ref: "#/definitions/Changer"
+      responses:
+        "200":
+          description: "Perfectly Done"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "swagger_server.controllers.utilisateur_controller"
+definitions:
+  User:
+    type: "object"
+    required:
+    - "codepostal"
+    - "password"
+    - "pseudo"
+    properties:
+      pseudo:
+        type: "string"
+      password:
+        type: "string"
+      expert_level:
+        type: "integer"
+        format: "int8"
+      codepostal:
+        type: "integer"
+        format: "int32"
+    example:
+      password: "password"
+      codepostal: 6
+      pseudo: "pseudo"
+      expert_level: 0
+  Login:
+    type: "object"
+    required:
+    - "password"
+    - "pseudo"
+    properties:
+      pseudo:
+        type: "string"
+      password:
+        type: "string"
+    example:
+      password: "password"
+      pseudo: "pseudo"
+  Changer:
+    type: "object"
+    required:
+    - "password"
+    - "pseudo"
+    properties:
+      pseudo:
+        type: "string"
+      password:
+        type: "string"
+      new password:
+        type: "string"
+      expert_level:
+        type: "integer"
+        format: "int8"
+      codepostal:
+        type: "integer"
+        format: "int32"
