@@ -14,7 +14,7 @@ function inscrire() {
 
 
 
-  xhttp.open("POST", "http://nuitinfo.devling.net:8080/compte/Utilisateur/register", true);
+  xhttp.open("POST", "http://nuitinfo.devling.net/api/compte/Utilisateur/register", true);
   xhttp.setRequestHeader("Content-type", "application/json");
   var object = {
       password: motDePasse,
