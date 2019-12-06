@@ -6,6 +6,7 @@ from flask import json
 from six import BytesIO
 
 from swagger_server.models.changer import Changer  # noqa: E501
+from swagger_server.models.info import Info  # noqa: E501
 from swagger_server.models.login import Login  # noqa: E501
 from swagger_server.models.user import User  # noqa: E501
 from swagger_server.test import BaseTestCase
@@ -33,9 +34,12 @@ class TestUtilisateurController(BaseTestCase):
 
         Getting informations from a user
         """
+        query_string = [('pseudo', 'pseudo_example'),
+                        ('password', 'password_example')]
         response = self.client.open(
-            '/compte/Utilisateur/info'.format(pseudo='pseudo_example', password='password_example', expert_level=56, codepostal=56),
-            method='GET')
+            '/compte/Utilisateur/info',
+            method='GET',
+            query_string=query_string)
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
 

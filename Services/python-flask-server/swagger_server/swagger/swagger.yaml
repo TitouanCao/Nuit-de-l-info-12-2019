@@ -80,24 +80,18 @@ paths:
       - "application/json"
       parameters:
       - name: "pseudo"
-        in: "path"
+        in: "query"
         required: true
         type: "string"
       - name: "password"
-        in: "path"
+        in: "query"
         required: true
         type: "string"
-      - name: "expert_level"
-        in: "path"
-        required: true
-        type: "integer"
-      - name: "codepostal"
-        in: "path"
-        required: true
-        type: "integer"
       responses:
         "200":
           description: "Perfectly Done"
+          schema:
+            $ref: "#/definitions/Info"
         "404":
           description: "User not found"
       x-swagger-router-controller: "swagger_server.controllers.utilisateur_controller"
@@ -166,7 +160,7 @@ definitions:
         type: "string"
       password:
         type: "string"
-      new password:
+      new_password:
         type: "string"
       expert_level:
         type: "integer"
@@ -174,3 +168,18 @@ definitions:
       codepostal:
         type: "integer"
         format: "int32"
+  Info:
+    type: "object"
+    required:
+    - "codepostal"
+    - "expert_level"
+    properties:
+      expert_level:
+        type: "integer"
+        format: "int8"
+      codepostal:
+        type: "integer"
+        format: "int32"
+    example:
+      codepostal: 6
+      expert_level: 0
