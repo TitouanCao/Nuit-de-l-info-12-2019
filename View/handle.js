@@ -55,6 +55,11 @@ function createQuest () {
     imgActiv1.src = "../Resources/FAQ.jpg"
     imgActiv2.src = "../Resources/FAQ.jpg"
     
+    link1.href = "connex.html"
+    link2.onclick = function() {
+        loadQuest1()
+    }
+    
     cardContent1.innerHTML = "Via un compte"
     cardContent2.innerHTML = "Sans compte"
     cardTitle1.innerHTML = "Via un compte"
@@ -109,6 +114,24 @@ function createQuest () {
     cardsContainer.style.marginTop = "7%"
 }
 
+function createQuest1 () {
+    let row = document.createElement("div")
+    
+    row.id = "quest1"
+    
+    row.innerHTML = "<div class='container'><br><h3>Questions préliminaires</h3><br><form action='#'><p><label><p><label><input style='padding:10%' type='checkbox'/><span>Etudiant français</span></label></p><p><label><p><label><input type='checkbox'/><span>Etudiant de l'Union Européenne</span></label></p><p><label><p><label><input type='checkbox'/><span>Je possède un logement</span></label></p><br><div><h5>Sources de revenu</h5><div class='row'><div class='col s12'><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>textsms</i><input type='text' id='autocomplete-input1' class='autocomplete'><label for='autocomplete-input1'>Montant mensuel perçu par les bourses</label></div></div></div></div><div class='row'><div class='col s12'><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>textsms</i><input type='text' id='autocomplete-input2' class='autocomplete'><label for='autocomplete-input2'>Montant mensuel perçu à travers des jobs étudiants</label></div></div></div></div></form><button class='btn waves-effect waves-light' type='submit' name='action'>Soumettre<i class='material-icons right'>send</i></button></div>"
+    
+    getBody.appendChild(row)
+    
+    row.style.position = "fixed"
+    row.style.top = "100%"
+    row.style.left = "0%"
+    row.style.backgroundColor = "white"
+    row.style.width = "100%"
+    row.style.transition = "1s"
+    row.style.textAlign = "center"
+}
+
 function loadQuest () {
     /*
     if (!document.getElementById("simulationContainer")) {
@@ -119,60 +142,19 @@ function loadQuest () {
     
     container.style.height = window.innerHeight - document.getElementById("menu").offsetHeight + "px"
     container.style.top = document.getElementById("menu").offsetHeight + "px"
-    container.style.position = "fi"
+    createQuest1()
+}
+
+
+function loadQuest1 () {
+    let quest = document.getElementById("quest1")
+
+    quest.style.height = window.innerHeight - document.getElementById("menu").offsetHeight + "px"
+    quest.style.top = document.getElementById("menu").offsetHeight + "px"
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-let row = document.createElement("div")
-    let cols = document.createElement("div")
-    let row2 = document.createElement("div")
-    let inputfield = document.createElement("div")
-    let icon = document.createElement("i")
-    let input = document.createElement("input")
-    let label = document.createElement("label")
-    
-    row.className = "row"
-    cols.className = "col s12"
-    row2.className = "row"
-    inputfield.className = "input-field col s12"
-    icon.className = "material-icons prefix"
-    input.className = "autocomplete"
-    
-    container.id = "simulationContainer"
-    input.id = "autocomplete-input"
-    
-    input.type = "text"
-    
-    label.for = "autocomplete-input"
-    
-
-
-*/
 
 
 
