@@ -29,10 +29,11 @@ function createQuest () {
     
     cardsContainer.id = "cards2"
     container.id = "simulationContainer"
+    row.id = "row"
     
     row.className = "row"
-    cols1.className = "col s12 m6"
-    cols2.className = "col s12 m6"
+    cols1.className = "col s6 m3"
+    cols2.className = "col s6 m3"
     card1.className = "card"
     card2.className = "card"
     cardImage1.className = "card-image waves-effect waves-block waves-light"
@@ -52,8 +53,8 @@ function createQuest () {
     link1.className = "waves-effect waves-light btn-large brown pulse"
     link2.className = "waves-effect waves-light btn-large brown pulse"
     
-    imgActiv1.src = "../Resources/FAQ.jpg"
-    imgActiv2.src = "../Resources/FAQ.jpg"
+    imgActiv1.src = "../Resources/Imagecomtpe.jpg"
+    imgActiv2.src = "../Resources/Imagesanscompte.jpg"
     
     link1.href = "connex.html"
     link2.onclick = function() {
@@ -107,10 +108,7 @@ function createQuest () {
     container.style.width = "100%"
     container.style.backgroundColor = "white"
     container.style.transition = "1s"
-    container.style.display = "flex"
-    container.style.flexDirection = "row"
     container.style.textAlign = "center"
-    cardsContainer.style.marginLeft = "28%"
     cardsContainer.style.marginTop = "7%"
 }
 
