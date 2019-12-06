@@ -22,9 +22,9 @@
 #cards {
     display: flex;
     flex-direction: row;
-    
+
     text-align: center;
-    
+
     position: fixed;
     top: 35%;
 }
@@ -99,3 +99,4 @@
         left:0;
     }
 }
+
