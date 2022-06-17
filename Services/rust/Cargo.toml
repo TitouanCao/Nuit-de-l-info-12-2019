@@ -10,7 +10,7 @@ edition = "2018"
 rocket = "0.4.2"
 rocket_contrib = "*"
 rocket_codegen = "*"
-diesel = { version = "1.0.0", features = ["mysql", "r2d2"] }
+diesel = { version = "1.4.6", features = ["mysql", "r2d2"] }
 dotenv = "0.9.0"
 serde = "*"
 serde_derive = "*"
